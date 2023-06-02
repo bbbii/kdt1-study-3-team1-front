@@ -2,10 +2,10 @@ version: "3.7"
 services:
   nginx:
     image: "nginx:latest"
-    container_name: next-page-nginx
+    container_name: frontend-nginx
     restart: unless-stopped
     volumes:
-      - /home/ubuntu/next-page/frontend/conf:/etc/nginx/conf.d
-      - /home/ubuntu/next-page/frontend/html:/usr/share/nginx/html
+      - /home/ec2-user/frontend/conf:/etc/nginx/conf.d
+      - /home/ec2-user/frontend/html:/usr/share/nginx/html
     ports:
       - "80:80"
